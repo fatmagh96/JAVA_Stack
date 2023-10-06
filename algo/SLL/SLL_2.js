@@ -128,6 +128,46 @@ class SLL {
         }
     }
 
+    contains(value) {
+		// start at the head
+		var runner = this.head;
+		// while we have a runner
+		while (runner) {
+			if (runner.value === value) {
+				return true;
+			}
+			// otherwise advance the runner
+			runner = runner.next;
+		}
+		// if the while loop completes, return false
+		return false;
+	}
+
+    delete(data){
+        if(this.contains(data)){
+            var runner = this.head;
+                if( data == this.head.value){
+                    this.head = null
+                }
+                else{
+                    while( runner.next.value != data){
+                        
+                        runner = runner.next
+                        if(!runner){
+                            return 0;
+                        }
+                        
+                    }
+                    var temp = runner.next
+                    runner.next = temp.next
+                    temp.next = null
+                }
+
+        }
+        return 0;
+
+    }
+
 
 }
 
@@ -145,3 +185,21 @@ console.log(myCoolSLL);
 console.log('++++++++++++++++++++')
 
 console.log(myCoolSLL.read());
+
+console.log('++++++++++++++++++++')
+myCoolSLL.delete(45);
+console.log('++++++++++++++++++++')
+console.log(myCoolSLL.read());
+
+
+var newSLL = new SLL();
+console.log(newSLL);
+
+newSLL.head = n1
+console.log(newSLL);
+
+newSLL.delete(11);
+console.log(newSLL);
+
+
+
