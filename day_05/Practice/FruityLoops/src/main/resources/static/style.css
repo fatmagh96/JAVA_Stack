@@ -5,6 +5,13 @@ h1 {
 }
 
 table {
-	border: 5px dashed #e18683;
+	border: 13px solid #f4b9c2;
+	width: 100%;
+	padding: 3px;
 	
+}
+
+tr {
+	border-bottom:2px solid #f4b9c2 ;
+	padding: 2px;
 }
