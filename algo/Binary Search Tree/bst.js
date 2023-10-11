@@ -36,12 +36,49 @@ class BST {
     }
 
     getLargestFromSubtree(current) {}
+
+    insert(node){
+        if (this.isEmpty){
+            this.root = node;
+        } else{
+            var runner = this.root;
+            while (runner.left != null || runner.right != null){
+
+                if(node.val > runner.val){
+                    if (runner.right == null){
+                        runner.right = node;
+                        break;
+                    } else{
+                        runner = runner.right;
+                    }
+                } else if(node.val < runner.val){
+                    if (runner.left == null){
+                        runner.left = node;
+                        break;
+                    } else{
+                        runner = runner.left;
+                    }
+                }
+
+            }
+
+        }
+        
+
+    }
 }
+
+
+/*
+
+
+*/
 
 var node1 = new BSTNode(75);
 var node2 =  new BSTNode(44);
 var node3 =  new BSTNode(78);
 var node4 =  new BSTNode(36);
+var node5 =  new BSTNode(50);
 
 node1.left = node2;
 node1.right = node3;
@@ -54,5 +91,9 @@ bst.root = node1;
 console.log(bst.isEmpty())
 
 bst.getSmallestFromSubtree();
+
+bst.insert(node5);
+
+console.log(bst)
 
 
