@@ -28,10 +28,12 @@
 		<h1>Save Travels</h1>
 		<table class="table table-striped table-bordered">
 			<thead>
+		       <tr>
 				<th>Expense</th>
 				<th>Vendor</th>
 				<th>Amount</th>
-				<th>Actions</th>
+				<th>Actions</th>		       
+		       </tr>
 			</thead>
 
 			<tbody>

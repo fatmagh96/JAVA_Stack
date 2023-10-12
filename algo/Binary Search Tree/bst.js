@@ -37,35 +37,62 @@ class BST {
 
     getLargestFromSubtree(current) {}
 
-    insert(node){
-        if (this.isEmpty){
-            this.root = node;
-        } else{
-            var runner = this.root;
-            while (runner.left != null || runner.right != null){
+    // insert(node){
+    //     if (this.isEmpty){
+    //         this.root = node;
+    //     } else{
+    //         var runner = this.root;
+    //         while (runner.left != null || runner.right != null){
 
-                if(node.val > runner.val){
-                    if (runner.right == null){
-                        runner.right = node;
-                        break;
-                    } else{
-                        runner = runner.right;
-                    }
-                } else if(node.val < runner.val){
-                    if (runner.left == null){
-                        runner.left = node;
-                        break;
-                    } else{
-                        runner = runner.left;
-                    }
-                }
+    //             if(node.val > runner.val){
+    //                 if (runner.right == null){
+    //                     runner.right = node;
+    //                     break;
+    //                 } else{
+    //                     runner = runner.right;
+    //                 }
+    //             } else if(node.val < runner.val){
+    //                 if (runner.left == null){
+    //                     runner.left = node;
+    //                     break;
+    //                 } else{
+    //                     runner = runner.left;
+    //                 }
+    //             }
 
+    //         }
+
+    //     }
+        
+
+    // }
+
+
+
+
+    deleteMin(){
+        if(this.root.left == null){
+            var temp = this.root;
+            this.root = this.root.right;
+            temp.right = null;
+        }
+        else{
+            while(runner.left.left != null){
+                runner = runner.left;
+            }
+
+            if (runner.left.right == null){
+                runner.left == null;
+            } else{
+                var temp = runner.left.left;
+                temp.right = null;
+                runner.left = runner.left.right
             }
 
         }
-        
-
     }
+
+
 }
 
 
