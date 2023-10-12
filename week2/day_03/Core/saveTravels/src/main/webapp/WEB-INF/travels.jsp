@@ -59,19 +59,19 @@
 			<h2>Add and expense:</h2>
 			<form:form action="/expenses" method="POST" modelAttribute="travel">
 				<form:errors path="*" class="text-danger" />
-				<div class="input-group mb-3">
-					<form:label path="expense" class="form-label">Expense Name:</form:label>
-					<form:input path="expense" class="form-control" />
+				<div class=" mb-3">
+					<form:label class="form-label" path="expense" >Expense Name:</form:label>
+					<form:input class="form-control"  path="expense" />
 				</div>
-				<div class="input-group  mb-3">
+				<div class="mb-3">
 					<form:label path="vendor" class="form-label">Vendor:</form:label>
 					<form:input path="vendor" class="form-control" />
 				</div>
-				<div class="input-group mb-3">
+				<div class="mb-3">
 					<form:label path="amount" class="form-label">Amount:</form:label>
 					<form:input type="number" path="amount" class="form-control" />
 				</div>
-				<div class="input-group mb-3">
+				<div class="mb-3">
 					<form:label path="description" class="form-label">Description:</form:label>
 					<form:textarea path="description" class="form-control" />
 				</div>
