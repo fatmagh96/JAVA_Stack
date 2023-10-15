@@ -1,0 +1,24 @@
+@charset "ISO-8859-1";
+
+.index {
+	margin: auto;
+	vertical-align: middle;
+	text-align: center;
+	margin-top: 50%;
+	display: flex;
+	gap: 50px;
+	justify-content: space-around;
+	min-height: 500px;
+	font-size: larger;
+}
+
+h1 {
+	color: deeppink;
+	margin: auto;
+	vertical-align: middle;
+	text-align: center;
+	margin-top: 10%;
+	
+	min-height: 500px;
+	
+}
